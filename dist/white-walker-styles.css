@@ -678,6 +678,9 @@ body {
   background-color: #004e86;
   font-family: 'Helvetica Neue'; }
 
+canvas {
+  display: block; }
+
 footer {
   background-color: #000;
   display: flex;
@@ -694,5 +697,33 @@ footer {
     flex-direction: column;
     text-align: center;
     font-size: 16px;
-    padding: 0 5%; }
+    width: 80%; }
+  footer div {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px 0; }
+    footer div img {
+      width: 100%;
+      vertical-align: middle; }
+  footer .hbo-container {
+    position: absolute;
+    top: calc(-100% + 20px);
+    width: 100%; }
+    footer .hbo-container img {
+      width: 200px; }
+
+.whiteW__container {
+  position: relative; }
+  .whiteW__container__bottle {
+    width: 500px;
+    height: auto;
+    margin: 5% auto 0; }
+
+.snow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0; }
 

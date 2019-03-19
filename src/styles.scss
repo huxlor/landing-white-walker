@@ -11,6 +11,10 @@ body{
     font-family: 'Helvetica Neue';
 }
 
+canvas{
+    display: block;
+}
+
 footer{
     background-color: $color-black;
     display: flex;
@@ -19,15 +23,6 @@ footer{
     bottom: 0;
     width: 100%;
     height: 100px;
-    img{
-        &.diageo-tyc{   
-        }
-
-        &.warning-tyc{
-            
-        }
-    }
-
     p{
         color: $color-white;
         text-transform: uppercase;
@@ -36,6 +31,43 @@ footer{
         flex-direction: column;
         text-align: center;
         font-size: 16px;
-        padding: 0 5%;
+        width: 80%;
     }
+
+    div{
+        width: 10%;
+        display: flex;
+        align-items: center;
+        padding: 0 20px 0;
+        img{
+            width: 100%;
+            vertical-align: middle;
+        }
+    }
+
+    .hbo-container{
+        position: absolute;
+        top: calc(-100% + 20px);
+        width: 100%;
+        img{
+            width: 200px;
+        }
+    }
+}
+
+.whiteW__container{
+    position: relative;
+    &__bottle{
+        width: 500px;
+        height: auto;
+        margin: 5% auto 0;
+    }
+}
+
+.snow{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
 }
