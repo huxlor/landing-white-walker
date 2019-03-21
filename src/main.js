@@ -626,7 +626,7 @@ const snow = new Shader( holder, {
 
     if ( Math.random() > 0.995 ) {
       wind.target = ( wind.min + Math.random() * ( wind.max - wind.min ) ) * ( Math.random() > 0.5 ? -1 : 1 )
-      console.log( wind.target )
+      // console.log( wind.target )
     }
 
     // stats.update()
@@ -639,13 +639,16 @@ function clickWhiteWalker(contentClass, link) {
   });
 }
 
-function closeWindow(contentClass) {
+function closeWindow(contentClass, generalContainer) {
   console.log({contentClass});
+  $(`.${contentClass}`).click(function(e){
+    $(`.${generalContainer}`).remove();
+  });
 }
 
 
 $(document).ready(function() {
   const linkBottle = 'https://www.tiendasjumbo.co/whisky-johnnie-walker-blanco-game-of-thones-x-750ml-edicion-limitada/p';
   clickWhiteWalker('snow', linkBottle);
-  closeWindow('close');
+  closeWindow('close', 'container__fixed');
 });

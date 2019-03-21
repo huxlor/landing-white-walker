@@ -670,114 +670,223 @@
     margin-left: 0; } }
 
 @keyframes brightness {
-  from {
+  0% {
     filter: brightness(25%);
     -webkit-filter: brightness(25%);
-    -moz-filter: brightness(25%); }
-  to {
+    -moz-filter: brightness(25%);
+    transform: scale(0.85); }
+  100% {
     filter: brightness(100%);
     -webkit-filter: brightness(100%);
-    -moz-filter: brightness(100%); } }
+    -moz-filter: brightness(100%);
+    transform: scale(1); } }
 
-body {
-  background-image: url(Fondo-White-Walker.jpg);
+@keyframes zoomIn {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1.5); } }
+
+.container__fixed {
+  background-image: url(Fondo-White-Walker-min.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-color: #004e86;
-  font-family: 'Helvetica Neue'; }
-
-canvas {
-  display: block; }
-
-footer {
-  background-color: #000;
-  display: flex;
-  justify-content: space-around;
+  font-family: 'Helvetica Neue';
+  animation-name: bgZoom;
+  animation-duration: 3s;
   position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 100px; }
-  footer p {
-    color: #fff;
-    text-transform: uppercase;
+  width: 100vw;
+  height: 100vh; }
+  .container__fixed canvas {
+    display: block; }
+  .container__fixed footer {
+    background-color: #000;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    font-size: 16px;
-    width: 80%; }
-  footer div {
-    width: 10%;
-    display: flex;
-    align-items: center;
-    padding: 0 20px 0; }
-    footer div img {
-      width: 100%;
-      vertical-align: middle; }
-  footer .hbo-container {
-    position: absolute;
-    top: calc(-100% + 20px);
-    width: 100%; }
-    footer .hbo-container img {
-      width: 200px; }
-
-.whiteW__container {
-  position: relative;
-  display: flex;
-  flex-wrap: nowrap; }
-  .whiteW__container__bottle {
-    width: 50%; }
-    .whiteW__container__bottle img {
-      width: 500px;
-      height: auto;
-      margin-top: 10%;
-      float: right;
-      margin-right: -150px;
-      animation-name: brightness;
-      animation-duration: 5s; }
-  .whiteW__container__info {
-    width: 50%;
-    padding-top: 10%; }
-    .whiteW__container__info__children {
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px; }
+    .container__fixed footer p {
+      color: #fff;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      font-size: 16px;
       width: 80%; }
-      .whiteW__container__info__children img {
-        margin: 0 auto;
-        width: 70%; }
-      .whiteW__container__info__children .game-thrones {
-        margin-bottom: 35px; }
-      .whiteW__container__info__children .name img {
-        width: 60%; }
-      .whiteW__container__info__children .btn-buy {
-        width: 40%;
-        margin: 20px auto;
-        background-color: #fff;
-        text-align: center;
-        border-radius: 5px;
-        font-weight: bold;
-        font-size: 35px;
-        padding: 15px 0;
-        font-family: 'Source Sans Pro';
-        line-height: 1; }
-      .whiteW__container__info__children .limited-edition img {
-        width: 45%; }
-
-.snow {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  cursor: pointer; }
-
-.close {
-  position: absolute;
-  text-align: center;
-  padding: 25px;
-  top: 0;
-  right: 0;
-  background-color: #000;
-  color: #fff;
-  cursor: pointer; }
+      @media screen and (max-width: 768px) {
+        .container__fixed footer p {
+          font-size: 6px;
+          font-weight: lighter;
+          letter-spacing: 1px;
+          width: 90%; } }
+    .container__fixed footer div {
+      width: 10%;
+      display: flex;
+      align-items: center;
+      padding: 0 20px 0; }
+      .container__fixed footer div img {
+        width: 100%;
+        vertical-align: middle; }
+      @media screen and (max-width: 768px) {
+        .container__fixed footer div {
+          width: 100%; } }
+    .container__fixed footer .hbo-container {
+      position: absolute;
+      top: calc(-100% + 20px);
+      width: 100%; }
+      .container__fixed footer .hbo-container img {
+        width: 200px; }
+      @media screen and (max-width: 768px) {
+        .container__fixed footer .hbo-container {
+          top: -35px; }
+          .container__fixed footer .hbo-container img {
+            width: 80px; } }
+    @media screen and (max-width: 768px) {
+      .container__fixed footer .tyc-hide {
+        display: none; } }
+    .container__fixed footer .tyc-mobile {
+      display: none; }
+      @media screen and (max-width: 768px) {
+        .container__fixed footer .tyc-mobile {
+          display: flex;
+          justify-content: space-around;
+          width: 100%; }
+          .container__fixed footer .tyc-mobile img {
+            width: 25%; } }
+    @media screen and (max-width: 768px) {
+      .container__fixed footer {
+        flex-wrap: wrap;
+        height: 75px; } }
+  .container__fixed .whiteW__container {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap; }
+    .container__fixed .whiteW__container__bottle {
+      width: 50%; }
+      .container__fixed .whiteW__container__bottle img {
+        height: auto;
+        float: right;
+        margin-right: -150px;
+        width: 450px;
+        margin-top: 15%;
+        animation-name: brightness;
+        animation-duration: 5s; }
+        @media screen and (min-width: 2300px) {
+          .container__fixed .whiteW__container__bottle img {
+            width: 570px; } }
+        @media screen and (max-width: 1366px) {
+          .container__fixed .whiteW__container__bottle img {
+            width: 350px;
+            margin-top: 20%; } }
+        @media screen and (max-width: 768px) {
+          .container__fixed .whiteW__container__bottle img {
+            width: 25%;
+            float: inherit;
+            margin: 0 auto; } }
+        @media screen and (max-width: 450px) {
+          .container__fixed .whiteW__container__bottle img {
+            width: 45%;
+            float: inherit;
+            margin: 0 auto; } }
+      @media screen and (max-width: 768px) {
+        .container__fixed .whiteW__container__bottle {
+          width: 100%;
+          height: 50vh;
+          display: flex;
+          justify-content: center;
+          /* align horizontal */
+          align-items: center;
+          /* align vertical */ } }
+    .container__fixed .whiteW__container__info {
+      width: 50%;
+      padding-top: 10%; }
+      .container__fixed .whiteW__container__info__children {
+        width: 80%; }
+        .container__fixed .whiteW__container__info__children img {
+          margin: 0 auto;
+          width: 70%; }
+        .container__fixed .whiteW__container__info__children .game-thrones {
+          margin-bottom: 35px; }
+          @media screen and (max-width: 768px) {
+            .container__fixed .whiteW__container__info__children .game-thrones {
+              margin-bottom: 10px; } }
+        .container__fixed .whiteW__container__info__children .name img {
+          width: 60%; }
+        .container__fixed .whiteW__container__info__children .btn-buy {
+          width: 40%;
+          margin: 0 auto;
+          background-color: #fff;
+          text-align: center;
+          border-radius: 5px;
+          font-weight: bold;
+          font-size: 35px;
+          padding: 15px 0;
+          font-family: 'Source Sans Pro';
+          line-height: 1; }
+          @media screen and (max-width: 768px) {
+            .container__fixed .whiteW__container__info__children .btn-buy {
+              width: 50%;
+              margin-top: 5px;
+              font-size: 20px;
+              padding: 10px 0; } }
+        .container__fixed .whiteW__container__info__children .limited-edition {
+          margin-top: 15px; }
+          .container__fixed .whiteW__container__info__children .limited-edition img {
+            width: 40%; }
+          @media screen and (max-width: 768px) {
+            .container__fixed .whiteW__container__info__children .limited-edition {
+              margin-top: 5px; } }
+        .container__fixed .whiteW__container__info__children .price {
+          text-align: center;
+          color: #fff;
+          font-family: 'Source Sans Pro';
+          font-size: 75px;
+          margin: 15px auto 0;
+          font-weight: 600; }
+          .container__fixed .whiteW__container__info__children .price span {
+            font-size: 35px;
+            padding-top: 40px; }
+          @media screen and (max-width: 768px) {
+            .container__fixed .whiteW__container__info__children .price {
+              font-size: 40px;
+              margin-top: 5px; }
+              .container__fixed .whiteW__container__info__children .price span {
+                font-size: 15px;
+                padding-top: 25px; } }
+        @media screen and (max-width: 768px) {
+          .container__fixed .whiteW__container__info__children {
+            width: 100%; } }
+      @media screen and (max-width: 768px) {
+        .container__fixed .whiteW__container__info {
+          width: 100%; } }
+    @media screen and (max-width: 768px) {
+      .container__fixed .whiteW__container {
+        flex-wrap: wrap-reverse; } }
+  .container__fixed .snow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer; }
+  .container__fixed .close {
+    position: absolute;
+    text-align: center;
+    padding: 25px;
+    top: 0;
+    right: 20px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer; }
+    @media screen and (max-width: 768px) {
+      .container__fixed .close {
+        padding: 10px;
+        right: 0;
+        font-size: 12px; } }
 
