@@ -487,8 +487,10 @@ const snowflake = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAAC
 // const stats = new Stats()
 // document.body.appendChild( stats.domElement )
 
+const volumen = 2000; 
+
 const holder = document.querySelector( '.snow' )
-const count = parseInt( holder.getAttribute( 'count' ) )
+const count = parseInt( volumen )
 
 let wind = {
   current: 0,

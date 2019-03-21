@@ -40,12 +40,12 @@
 //     100% {
 //         transform: scale(1);
 //     }
-// }
+// } 
 
 .container__fixed{
     background-image: url($background-ice);
     background-position: center center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
     background-attachment: fixed;
     background-size: cover;
     background-color: $color-dark-blue;
@@ -55,11 +55,13 @@
     position: fixed;
     width: 100vw;
     height: 100vh;
+    top:0;
+    z-index: 100000000000;
     canvas{
         display: block;
     }
     
-    footer{
+    .footer{
         background-color: $color-black;
         display: flex;
         justify-content: space-around;
@@ -80,7 +82,7 @@
                 font-size: 6px;
                 font-weight: lighter;
                 letter-spacing: 1px;
-                width: 90%;
+                width: 90%; 
             }
         }
     
@@ -222,10 +224,10 @@
                     font-family: 'Source Sans Pro';
                     line-height: 1;
                     @media screen and (max-width: 768px) {
-                        width: 50%;
+                        width: 35%;
                         margin-top: 5px;
-                        font-size: 20px;
-                        padding: 10px 0;
+                        font-size: 15px;
+                        padding: 5px 0;
                     }
                 }
     
@@ -253,11 +255,11 @@
                     }
 
                     @media screen and (max-width: 768px) {
-                        font-size: 40px;
+                        font-size: 30px;
                         margin-top: 5px;
                         span{
                             font-size: 15px;
-                            padding-top: 25px;
+                            padding-top: 15px;
                         }
                     }
                 }
@@ -291,7 +293,7 @@
         text-align: center;
         padding: 25px;
         top: 0;
-        right: 20px;
+        right: 15px;
         background-color: $color-black;
         color: $color-white;
         cursor: pointer;
